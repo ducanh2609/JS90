@@ -1,0 +1,13 @@
+.content-box {
+    border: 1px solid blue;
+    margin-top: 100px;
+    overflow: auto;
+
+    .content {
+        border: 1px solid yellow;
+        background-color: red;
+        min-height: calc(100vh - 100px - 200px);
+        display: flex;
+        justify-content: space-between;
+    }
+}
