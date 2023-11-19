@@ -1,5 +1,16 @@
+import Button from "../common/Button";
 import "./side-bar.scss";
 
-export default function SideBar() {
-  return <div className="side-bar-box">SideBar Box</div>;
+const styleDefault = {
+  backgroundColor: "black",
+  width: "200px",
+};
+
+export default function SideBar({ styleSideBar }) {
+  return (
+    <div className="side-bar-box" style={styleSideBar || styleDefault}>
+      SideBar Box
+      <Button title={"Update"} />
+    </div>
+  );
 }
