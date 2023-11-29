@@ -1,0 +1,9 @@
+.color-box {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    margin: 10vh auto;
+    display: grid;
+    grid-template-columns: repeat(6, calc(100% / 6));
+
+}

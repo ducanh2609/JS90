@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./form.scss";
 import Input from "../plugin/Input";
 
-function Login({ modeItem, setMode }) {
+function Login({ modeItem, setMode, dataForm, title }) {
   const userDefault = {
     username: "",
     password: "",
@@ -26,7 +26,7 @@ function Login({ modeItem, setMode }) {
   const handlerSubmit = (e) => {
     e.preventDefault();
     let isAbleLogin = true;
-    if (modeItem === "login") {
+    if (modeItem) {
     }
     if (!user.username) {
       error.username = "Username không được để trống";
@@ -40,7 +40,7 @@ function Login({ modeItem, setMode }) {
     } else {
       error.password = "";
     }
-    if (modeItem !== "login") {
+    if (!modeItem) {
       const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
       if (!regex.test(user.email)) {
         error.email = "Email k đúng";
@@ -59,64 +59,34 @@ function Login({ modeItem, setMode }) {
       setError({ ...error });
       return;
     } else {
-      setError(modeItem === "login" ? errorDefault : errorDefaultRegister);
+      setError(modeItem ? errorDefault : errorDefaultRegister);
       alert("login");
     }
   };
   const [user, setUser] = useState(
-    modeItem === "login" ? userDefault : userDefaultRegister
+    modeItem ? userDefault : userDefaultRegister
   );
   const [error, setError] = useState(
-    modeItem === "login" ? errorDefault : errorDefaultRegister
+    modeItem ? errorDefault : errorDefaultRegister
   );
-
   return (
     <div>
       <form className="login-form" onSubmit={handlerSubmit}>
-        <h1>{modeItem === "login" ? "LOGIN" : "REGISTER"}</h1>
-        <Input
-          label="Username"
-          id="username"
-          value={user.username}
-          handlerChange={handlerChange}
-          keyInput="username"
-          errMess={error.username}
-        />
-        {modeItem !== "login" ? (
+        <h1>{title}</h1>
+        {dataForm.map((item) => (
           <Input
-            label="Email"
-            id="email"
-            value={user.email}
+            key={item.id}
+            label={item.label}
+            id={item.id}
+            value={user[item.id]}
             handlerChange={handlerChange}
-            keyInput="email"
-            errMess={error.email}
+            keyInput={item.keyInput}
+            errMess={error[item.id]}
           />
-        ) : (
-          ""
-        )}
-        <Input
-          label="Password"
-          id="password"
-          value={user.password}
-          handlerChange={handlerChange}
-          keyInput="password"
-          errMess={error.password}
-        />
-        {modeItem !== "login" ? (
-          <Input
-            label="Confirm Password"
-            id="confirm"
-            value={user.confirm}
-            handlerChange={handlerChange}
-            keyInput="confirm"
-            errMess={error.confirm}
-          />
-        ) : (
-          ""
-        )}
+        ))}
         <button>Submit</button>
-        <p onClick={() => setMode(modeItem !== "login" ? "login" : "register")}>
-          {modeItem !== "login" ? "Login" : "Register"}
+        <p onClick={() => setMode(!modeItem ? "login" : "register")}>
+          {modeItem ? "Login" : "Register"}
         </p>
       </form>
     </div>
