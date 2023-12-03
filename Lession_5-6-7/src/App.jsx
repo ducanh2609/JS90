@@ -40,6 +40,7 @@ function App() {
       keyInput: "confirm",
     },
   ];
+  const [isOpen, setIsOpen] = useState(true);
   const isLoginForm = mode === "login";
   return (
     <div>
@@ -50,7 +51,15 @@ function App() {
         title={isLoginForm ? "LOGIN" : "REGISTER"}
       /> */}
       {/* <ColorBox /> */}
-      <TodoList />
+
+      {isOpen && <TodoList />}
+      <button
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
+        Close
+      </button>
     </div>
   );
 }
