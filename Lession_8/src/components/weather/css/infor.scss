@@ -1,0 +1,58 @@
+.infor {
+    height: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .weather-icon {
+        background-color: white;
+        height: 40%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        img {
+            margin-top: 6%;
+            scale: 5;
+            background-color: white;
+        }
+    }
+
+    .weather-infor {
+        height: 35%;
+        display: flex;
+
+        >div {
+            width: calc(100% / 3);
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .temp {
+            font-size: 28px;
+            background-color: black;
+
+            h1,
+            sup {
+                background-color: black;
+            }
+        }
+
+
+
+        .time {
+            background-color: red;
+        }
+    }
+
+    .detail-box {
+        background-color: white;
+        height: 25%;
+        display: flex;
+    }
+}
