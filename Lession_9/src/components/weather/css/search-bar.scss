@@ -1,0 +1,33 @@
+.search-bar {
+    position: relative;
+    height: 10%;
+    margin-bottom: 5%;
+    display: flex;
+
+    input {
+        height: 100%;
+        width: 85%;
+        background-color: white;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        font-size: 25px;
+        outline: none;
+        box-shadow: inset 1px 1px 10px, inset -3px -3px 10px rgb(198, 193, 193);
+        padding: 0 10px;
+    }
+
+    button {
+        height: 100%;
+        width: 15%;
+        border: none;
+        background-color: red;
+        box-shadow: inset 1px 1px 10px rgb(72, 9, 9), inset -3px -3px 10px rgb(227, 92, 92);
+        color: white;
+        border-radius: 0px 5px 5px 0;
+        font-size: 25px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
