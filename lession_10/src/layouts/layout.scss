@@ -1,0 +1,41 @@
+.layout {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: #1b1b1b;
+
+
+    .header {
+        height: 30px;
+        width: 100%;
+        background-color: #055b92;
+        position: fixed;
+        top: 0;
+    }
+
+    .body-content {
+        width: 80%;
+        margin: 30px auto;
+
+
+        .content {
+            min-height: 500px;
+
+            .store-infor {
+                height: 113px;
+                background-color: #1b1b1b;
+                display: flex;
+
+                .infor {
+                    background-image: url('/uploads/logo/12.jpg');
+                }
+            }
+        }
+
+        .footer {
+            min-height: 200px;
+            background-color: #055b92;
+        }
+    }
+
+}
