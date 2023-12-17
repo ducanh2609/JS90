@@ -1,19 +1,38 @@
+import { useState } from "react";
+import { useEffect } from "react";
+import { COMPUTER_LIST_GROUP } from "../../utils/constans";
+import Card from "./Card";
+
 function Computer() {
+  const [data, setData] = useState([]);
+  useEffect(async () => {
+    const fetchData = async () => {
+      // const res = await axios.put(
+      //   "https://640fee7ee1212d9cc9250d67.mockapi.io/api/v1/todo/1"
+      // );
+      // console.log("res", res.data);
+      const res = await fetch("/data-base/computer.json");
+      const dataJson = await res.json();
+      setData(dataJson);
+    };
+    fetchData();
+  }, []);
   return (
     <div className="item-box">
-      <div className="item-group">
-        <h1>abc</h1>
-      </div>
-      <div className="item-content">
-        <div className="item">
-          <img src="" alt="" />
-          <p>test1</p>
-          <div>3.900.000 đ</div>
-          <div>
-            <button>Thêm vào giỏ hàng</button>
+      {COMPUTER_LIST_GROUP.map((group) => (
+        <>
+          <div className="item-group">
+            <h1>{group.title}</h1>
           </div>
-        </div>
-      </div>
+          <div className="item-content">
+            {data
+              ?.filter((item) => item.group === group.value)
+              .map((item) => (
+                <Card item={item} />
+              ))}
+          </div>
+        </>
+      ))}
     </div>
   );
 }

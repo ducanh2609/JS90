@@ -20,15 +20,13 @@
 
         .content {
             min-height: 500px;
+            margin-bottom: 40px;
 
             .store-infor {
                 height: 113px;
                 background-color: #1b1b1b;
                 display: flex;
 
-                .infor {
-                    background-image: url('/uploads/logo/12.jpg');
-                }
             }
         }
 

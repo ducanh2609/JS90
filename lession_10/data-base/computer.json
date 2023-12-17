@@ -2,8 +2,71 @@
     {
         "id": 1,
         "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
-        "image": "https://maytinhhoangha.com/case-h81-chip-i5-4570-ram-8gb-ssd-120gb-man-hinh-20-inch",
+        "image": "/src/assets/Image/CASE1.png",
         "price": "3.900.000",
         "group": 1
+    },
+    {
+        "id": 2,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 2
+    },
+    {
+        "id": 3,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 3
+    },
+    {
+        "id": 4,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 1
+    },
+    {
+        "id": 5,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 4
+    },
+    {
+        "id": 6,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 1
+    },
+    {
+        "id": 7,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 2
+    },
+    {
+        "id": 8,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 5
+    },
+    {
+        "id": 9,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 3
+    },
+    {
+        "id": 10,
+        "name": "Case H81 Chip i5 4570/ Ram 8gb/ SSD 120Gb/ Màn ..",
+        "image": "",
+        "price": "3.900.000",
+        "group": 2
     }
 ]

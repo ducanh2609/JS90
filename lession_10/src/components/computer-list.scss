@@ -7,8 +7,8 @@
     display: flex;
 
     .list {
-        width: 260px;
-        background-color: black;
+        width: 25%;
+        background-color: #6c6969;
 
         .list-item {
             border: 1px solid rgb(69, 69, 69);
@@ -16,6 +16,9 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
 
             &:hover {
                 cursor: pointer;
@@ -38,10 +41,10 @@
 
         .item {
             min-height: 400px;
-            background-color: #545353;
+            background-color: #23b8d5;
 
             img {
-                min-height: 200px;
+                width: 100%;
             }
 
         }
