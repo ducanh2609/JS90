@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { COMPUTER_LIST_GROUP } from "../../utils/constans";
 import Card from "./Card";
 
-function Computer() {
+function Computer({ setComputerList }) {
   const [data, setData] = useState([]);
   useEffect(async () => {
     const fetchData = async () => {
@@ -14,6 +14,7 @@ function Computer() {
       const res = await fetch("/data-base/computer.json");
       const dataJson = await res.json();
       setData(dataJson);
+      setComputerList(dataJson);
     };
     fetchData();
   }, []);
@@ -22,7 +23,12 @@ function Computer() {
       {COMPUTER_LIST_GROUP.map((group) => (
         <>
           <div className="item-group">
-            <h1>{group.title}</h1>
+            <div className="item-group-box">
+              <h3>
+                <img src={group.icon} alt="" />
+                {group.title}
+              </h3>
+            </div>
           </div>
           <div className="item-content">
             {data

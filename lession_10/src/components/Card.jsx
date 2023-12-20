@@ -1,12 +1,12 @@
 function Card({ item }) {
   return (
-    <div className="item">
-      <img src={item.image} alt="" />
-      <p>{item.name}</p>
-      <div>{item.price} đ</div>
+    <div className="computer-items">
       <div>
-        <button>Thêm vào giỏ hàng</button>
+        <img className="computer-img" src={item.image} alt="" />
       </div>
+      <div className="computer-text">{item.name}</div>
+      <div className="computer-price">{item.price} đ</div>
+      <div className="computer-cart">Thêm vào giỏ hàng</div>
     </div>
   );
 }
