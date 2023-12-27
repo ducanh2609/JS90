@@ -6,6 +6,7 @@ import Results from "./components/Results";
 import { setComputerList } from "./redux/actions/computerActions";
 import { useEffect } from "react";
 import Computer from "./components/Computer";
+import { set } from "./redux/slices/computerSlice";
 // import ErrorBoundary from "./components/ErrorBounDary";
 // import DoSomething from "./components/DoSomething";
 
@@ -35,20 +36,21 @@ import Computer from "./components/Computer";
 // teacher.sayHello();
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(async () => {
-    const fetchData = async () => {
-      const res = await fetch("/data-base/computer.json");
-      const dataJson = await res.json();
-      dispatch(setComputerList(dataJson));
-    };
-    fetchData();
-  }, []);
+  // const dispatch = useDispatch();
+  // useEffect(async () => {
+  //   const fetchData = async () => {
+  //     const res = await fetch("/data-base/computer.json");
+  //     const dataJson = await res.json();
+  //     // dispatch(setComputerList(dataJson));
+  //     dispatch(set(dataJson));
+  //   };
+  //   fetchData();
+  // }, []);
   return (
     <>
-      {/* <Results />
-      <CountChange /> */}
-      <Computer />
+      <Results />
+      <CountChange />
+      {/* <Computer /> */}
     </>
   );
 }

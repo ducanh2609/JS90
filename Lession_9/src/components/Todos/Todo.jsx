@@ -4,9 +4,11 @@ import "./todo.scss";
 import TodoContext from "./TodoConText";
 import Button from "./Button";
 import Input from "./Input";
+import { useSelector } from "react-redux";
 
 function Todo() {
-  const { todos } = useContext(TodoContext);
+  // const { todos } = useContext(TodoContext);
+  const todos = useSelector(({ todos }) => todos);
   return (
     <div className="todo-list">
       <h1>TODOLIST</h1>

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import TodoContext from "./TodoConText";
 
 function TodoItem({ todo }) {
-  const { Edit, Del } = useContext(TodoContext);
+  // const { Edit, Del } = useContext(TodoContext);
   return (
     <div className="content-item">
       <div className="content-span">
@@ -12,12 +12,8 @@ function TodoItem({ todo }) {
         </span>
       </div>
       <div className="button-editor">
-        <button className="edit" onClick={() => Edit(todo)}>
-          Edit
-        </button>
-        <button className="del" onClick={() => Del(todo)}>
-          Delete
-        </button>
+        <button className="edit">Edit</button>
+        <button className="del">Delete</button>
       </div>
     </div>
   );

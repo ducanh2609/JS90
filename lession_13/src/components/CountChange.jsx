@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
-import { decrement, increment } from "../redux/actions/countActions";
+import { decrement, increment } from "../redux/slices/counterSlice";
+// import { decrement, increment } from "../redux/actions/countActions";
 
 const product1 = {
   name: "Dầu ăn",
